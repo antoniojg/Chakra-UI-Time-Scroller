@@ -1,0 +1,27 @@
+{
+  "name": "chakra-ui-time-scroller",
+  "version": "1.0.0",
+  "description": "This time scroller is built with Chakra UI. It provides a clean easy to integrate time scroller to use on project",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "npm run clean:win && npm run clean:lin",
+    "clean:win": "node -e \"if (process.platform === 'win32') process.exit(1)\" || , if exist dist rmdir /Q /S dist",
+    "clean:lin": "node -e \"if (process.platform !== 'win32') process.exit(1)\" || rm -rf dist",
+    "build": "npm run build:win && npm run build:lin",
+    "build:win": "node -e \"if (process.platform === 'win32') process.exit(1)\" || , npm run clean && tsc && copy package.json dist && copy README.md dist",
+    "build:lin": "node -e \"if (process.platform !== 'win32') process.exit(1)\" || , npm run clean && tsc && cp package.json README.md ./dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.9",
+    "@chakra-ui/react": "^2.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.20",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.8.3"
+  }
+}
