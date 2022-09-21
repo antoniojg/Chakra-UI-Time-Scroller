@@ -1,6 +1,6 @@
 {
   "name": "chakra-ui-time-scroller",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This time scroller is built with Chakra UI. It provides a clean easy to integrate time scroller to use on project",
   "main": "index.tsx",
   "homepage": "https://github.com/antoniojg/Chakra-UI-Time-Scroller#readme",
